@@ -29,5 +29,6 @@ object Form1: TForm1
     Height = 25
     Caption = 'btn_export'
     TabOrder = 1
+    OnClick = btn_exportClick
   end
 end

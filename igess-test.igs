@@ -1,9 +1,9 @@
 msom generated IGES File from database                                  S0000001
-D:\asv\programming\igess-export\Project1.exe                            S0000002
+D:\programming\igess-export\Project1.exe                                S0000002
 ,                                                                       G0000001
 ,                                                                       G0000002
 22HMSC.Patran IGES Access,                                              G0000003
-46HD:\asv\programming\igess-export/igess-test.igs,                      G0000004
+42HD:\programming\igess-export/igess-test.igs,                          G0000004
 22Hmsom v.1 Arkhipov S.V.,                                              G0000005
 22Hmsom v.1 Arkhipov S.V.,                                              G0000006
 32,                                                                     G0000007
@@ -17,4 +17,23 @@ D:\asv\programming\igess-export\Project1.exe                            S0000002
 4HINCH,                                                                 G0000015
 1,                                                                      G0000016
 0,                                                                      G0000017
-15H20170105.163212,                                                     G0000018
+15H20170105.233418,                                                     G0000018
+0.500000E-02,                                                           G0000019
+8.,                                                                     G0000020
+13HArkhipov S.V.,                                                       G0000021
+3HBSU,                                                                  G0000022
+11,                                                                     G0000023
+0,                                                                      G0000024
+15H20170105.233418,                                                     G0000025
+;                                                                       G0000026
+     116       1       2       2       0       0       0       000000000D0000001
+     116       0       0       1       0       0       0POINT          1D0000002
+     116       2       2       2       0       0       0       000000000D0000003
+     116       0       0       1       0       0       0POINT          2D0000004
+     110       3       2       1       0       0       0       000000000D0000005
+     110       0       0       2       0       0       0LINE           1D0000006
+116, 0.000000000E+00, 0.000000000E+00, 0.000000000E+00;                1P0000001
+116, 0.800000000E+01, 0.000000000E+00, 0.000000000E+00;                3P0000002
+110, 0.000000000E+00, 0.000000000E+00, 0.000000000E+00,                5P0000003
+ 0.800000000E+01, 0.000000000E+00, 0.000000000E+00;                    5P0000004
+S      2G      6D      6P      4                                        T0000001

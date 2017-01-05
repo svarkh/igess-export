@@ -72,16 +72,25 @@ begin
   g[17]:=IntToStr(Length(dtime))+'H'+dtime+','; // 2.2.4.3.18 Date and Time of Exchange File Generation.
 
   g[18]:='0.500000E-02'+','; // 2.2.4.3.19 Minimum User-Intended Resolution.
-
-  for i:=0 to 18 do
+  g[19]:='8.'+','; // 2.2.4.3.20 Approximate Maximum Coordinate Value. field contains the upper bound on the absolute values of all coordinate data actually occurring in this model   ECO653 after transformation (e.g., 1000.0 means for all coordinates, |X|, |Y|, |Z|<= 1000.0)
+  g[20]:='13H'+'Arkhipov S.V.'+','; // 2.2.4.3.21 Name of Author.
+  g[21]:='3HBSU'+','; // 2.2.4.3.22 Author’s Organization
+  g[22]:='11'+','; // 2.2.4.3.23 Version Flag. 11 - Version 5.3
+  g[23]:='0'+',';// 2.2.4.3.24 Drafting Standard Flag. 0 - None - No standard specified (default)
+  g[24]:=g[17]; // 2.2.4.3.25 Date and Time Model was Created or Modified
+  g[25]:=';'; // 2.2.4.3.26 Application Protocol/Subset Identifier. The ECO643 default value is NULL, which is interpreted as “unspecified.”
+  for i:=0 to 25 do
   begin
     if Length(g[i])<72 then g[i]:=g[i]+StringOfChar(' ',72-Length(g[i]));
     if i<9 then g[i]:=g[i]+'G000000'+inttostr(i+1)
     else g[i]:=g[i]+'G00000'+inttostr(i+1);
     mmo1.Lines.Add(g[i]);
   end;
-  mmo1.Lines.Add(g[i]);
 
+  // Directory Entry Section
+  // У Раздела Записи каталога есть одна запись Записи каталога для каждого объекта в файле. Запись Записи каталога для каждого объекта фиксирована в размере и содержит 20 полей восьми символов каждый в двух последовательных строках с 80 символами. Значения выровнены по правому знаку в каждом поле. За исключением полей, пронумерованных 10, 16, 17, 18, и 20, все поля в этом разделе должны быть или целым числом или типами данных указателя. В этом разделе слово “число” иногда используется вместо слова “целое число”.
+  // Цели Раздела Записи каталога состоят в том, чтобы обеспечить индекс для файла и содержать информацию атрибута для каждого объекта. Порядок записей Записи каталога в Разделе Записи каталога произволен.
+  // В Разделе Записи каталога, полностью пробел (т.е., пустое) принято значение по умолчанию поле; постпроцессоры должны присвоить значения по умолчанию, определенные в этой Спецификации (значения варьируются типом объекта). Поля 1, 2, 10, 11, 14, и 20 не должны быть приняты значение по умолчанию кроме Сжатых файлов Формата.
 end;
 
 procedure TForm1.btn_exportClick(Sender: TObject);
@@ -91,10 +100,8 @@ begin
   Rewrite(f);
   writeln(f, s1);
   writeln(f, s2);
-  for i:=0 to 18 do writeln(f, g[i]);
+  for i:=0 to 25 do writeln(f, g[i]);
   CloseFile(f);
-
-
 end;
 
 end.

@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 511
-  Top = 299
+  Left = 838
+  Top = 409
   Width = 416
   Height = 399
   Caption = 'igess export'

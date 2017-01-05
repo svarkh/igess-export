@@ -1,7 +1,20 @@
 msom generated IGES File from database                                  S0000001
-D:\programming\igess-export\Project1.exe                                S0000002
+D:\asv\programming\igess-export\Project1.exe                            S0000002
 ,                                                                       G0000001
 ,                                                                       G0000002
 22HMSC.Patran IGES Access,                                              G0000003
-42HD:\programming\igess-export/igess-test.igs,                          G0000004
+46HD:\asv\programming\igess-export/igess-test.igs,                      G0000004
 22Hmsom v.1 Arkhipov S.V.,                                              G0000005
+22Hmsom v.1 Arkhipov S.V.,                                              G0000006
+32,                                                                     G0000007
+38,                                                                     G0000008
+6,                                                                      G0000009
+,                                                                       G0000010
+,                                                                       G0000011
+22HMSC.Patran IGES Access,                                              G0000012
+1.0,                                                                    G0000013
+1,                                                                      G0000014
+4HINCH,                                                                 G0000015
+1,                                                                      G0000016
+0,                                                                      G0000017
+15H20170105.163212,                                                     G0000018
